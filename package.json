@@ -1,0 +1,47 @@
+{
+  "name": "stencil",
+  "version": "1.0.0",
+  "description": "描述信息",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/types/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -w -c",
+    "build:types": "tsc -b ./tsconfig.json",
+    "build": "npm run build:types && rollup -c --bundleConfigAsCjs",
+    "prepublish": "pnpm version && pnpm build",
+    "test": "jest",
+    "add": "node ./tool/add.js",
+    "del": "node ./tool/delTools.js",
+    "createdDoc": "node tool/createdDocs/index.js",
+    "createdNpmDoc": "node tool/createdDocs/index.js --npm",
+    "npmbag": "npm run build && cimi patch master",
+    "all": "npm run createdDoc && npm run test && npm run npmbag ",
+    "doc:dev": "cd vuepress && npm run dev",
+    "doc:build": "cd vuepress && npm run build",
+    "doc:preview": "cd vuepress && npm run serve",
+    "doc:serve": "npm run doc:build && npm run doc:preview"
+  },
+  "repository": "",
+  "homepage": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "cimi": "^1.2.1",
+    "jest": "^29.5.0",
+    "rollup": "^3.24.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^29.1.0",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}

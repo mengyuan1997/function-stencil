@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <trees>
+     <tree path="/README.md" title="说明文件"/>
+     <tree path="/src" title="工具主文件"/>
+     <tree path="/src/index.ts" title="入口文件"/>
+     <tree path="/vuepress" title="说明文档项目"/>
+     <tree path="/tool" title="工具"/>
+     <tree path="/test" title="测试单元" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
+           backgroundColor=""/>
+     <tree path="/tool/createdDocs" title="生成说明文档" extension="" presentableText="" tooltipTitle="" icon=""
+           textColor="" backgroundColor=""/>
+     <tree path="/tool/add.js" title="添加函数" extension="" presentableText="" tooltipTitle="" icon="" textColor=""
+           backgroundColor=""/>
+    <tree path="/tool/delTools.js" title="删除函数"/>
+</trees>
